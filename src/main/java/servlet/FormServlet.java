@@ -4,6 +4,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -38,10 +39,14 @@ public class FormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        HttpSession session = req.getSession();
+
         String firstName = req.getParameter("first_name");
         String lastName = req.getParameter("last_name");
 
         String chemistry = req.getParameter("chemistry");
+
+        session.setAttribute("name", firstName);
 
         resp.setContentType("text/html");
         resp.getWriter().print(firstName + " " + lastName);
