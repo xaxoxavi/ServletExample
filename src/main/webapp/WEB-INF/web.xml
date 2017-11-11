@@ -5,6 +5,11 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring-beans.xml</param-value>
+  </context-param>
+
   <filter>
     <filter-name>authentication</filter-name>
     <filter-class>filter.AuthenticationFilter</filter-class>
@@ -19,6 +24,11 @@
     <filter-name>authentication</filter-name>
     <url-pattern>/session</url-pattern>
   </filter-mapping-->
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
 
   <servlet>
     <servlet-name>helloWorld</servlet-name>

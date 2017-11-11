@@ -45,6 +45,7 @@ public class HelloWorld extends HttpServlet {
 
         Cookie[] cookies = req.getCookies();
 
+        if (cookies != null)
         for (Cookie cookie: cookies){
             resp.getWriter().print(cookie.getName() + " " + cookie.getValue() + "<br/>");
         }

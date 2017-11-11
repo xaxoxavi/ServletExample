@@ -1,5 +1,6 @@
 package servlet;
 
+import bean.NameContainer;
 import domain.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -29,6 +30,7 @@ public class LoginServlet extends HttpServlet {
         context = new ClassPathXmlApplicationContext(
                 "spring-beans.xml");
 
+        NameContainer nameContainer = (NameContainer) context.getBean("nameContainer");
     }
 
     @Override

@@ -26,6 +26,6 @@ public class ErrorManager extends HttpServlet {
                 req.getAttribute("javax.servlet.error.exception");
 
         resp.getWriter().print(req.getMethod());
-        resp.getWriter().print(throwable.getMessage());
+        resp.getWriter().print(throwable.getStackTrace());
     }
 }
