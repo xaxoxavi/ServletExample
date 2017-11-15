@@ -82,7 +82,7 @@
 
   <servlet-mapping>
     <servlet-name>helloWorld</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/hello</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

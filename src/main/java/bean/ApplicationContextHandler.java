@@ -19,7 +19,7 @@ public class ApplicationContextHandler {
         context = applicationContext;
     }
 
-    @Autowired
+    //@Autowired
     public void polloperaPocoyoBean(PocoyoBean pBean){
         pocoyoBean = pBean;
     }
